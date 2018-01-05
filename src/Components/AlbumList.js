@@ -21,6 +21,7 @@ import axios from 'axios';
 // is executed our function will be called
 // issue we encountered is the albumlist ,header app loads before we
 // get a chance to return result of json request
+import AlbumDetail from './AlbumDetail';
 // we now need to bring a change in timeline
 // we will use component state to solve This
 // state is how react handles changing content of component
@@ -53,14 +54,45 @@ componentWillMount() {
   axios.get('http://rallycoding.herokuapp.com/api/music_albums')
   .then(response => this.setState({ albums: response.data }));
 }
+// we will now create a function to render the Albums
+// renderAlbums initially will fetch code from response and shwo as title
+// what we will do is use map function to get content out of this.state.Albums
+// its like the python function .album is like x,we use it to do operations inside map
+// we have to put {} after text because with jsx when we use variables or functions
+// if we dont use {} it considers as text
+// old render method before we use AlbumDetails
+// renderAlbums() {
+//   return this.state.albums.map((album) => <Text key={album.title}>{album.title}</Text>);
+// }
+//key is something which is needed above
+// whenever we show components are in an array,each component inside of array must have
+// a key property associated with it.
+// this is performance based,so it can intelligently rerendering a particular component
+// we add key = {keyid}
+// this key must be unique and not repeated throughout.
+//Keys help React identify which items have changed, are added, or are removed.
+// Keys should be given to the elements inside the array to give the elements a stable identity:
+//The best way to pick a key is to use a string that uniquely
+//identifies a list item among its siblings
+// Most often you would use IDs from your data as keys:
+// li key={todo.id}
+//When you don’t have stable IDs for rendered items,
+// you may use the item index as a key as a last resort:
+//eg we used above album.title
+//We don’t recommend using indexes for keys if the order of items may change.
+// This can negatively impact performance and may cause issues with component state.
+// using AlbumDetails in new renderAlbums methods
+renderAlbums() {
+  return this.state.albums.map((album) =>
+  <AlbumDetail key={album.title} album={album} />);
+}
 
-
-  render() {
+render() {
     //checking the state before and after rendering of data
     console.log(this.state);
     return (
       <View>
-        <Text>AlbumList</Text>
+        {this.renderAlbums()}
       </View>
     );
   }
