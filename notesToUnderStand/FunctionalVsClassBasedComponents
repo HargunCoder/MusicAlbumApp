@@ -1,0 +1,53 @@
+We have two type of components in React
+1)Functional Components
+    -These are usually used for static data
+    -They cant handle fetching data
+    -Their functionality is very limited.
+    Analogy to undersatnd this point,
+    if we consider a garden hose ,then we can only put water at one end
+    and at other end we get water similarly,here we put data at one end and
+    get jsx at other end.
+    eg.
+    const Header = () =>{
+    return(<Text>Hello world</Text>);
+    }
+2)Class Based Compoenents
+    -used for dynamic data .
+    -can handle fetching data
+    -easy to organise large codes because we get many helper methods with them
+    -handles any data that might change
+    this extends the base class component in react
+
+A class Based component always require a render method.
+The only requirement for this method is that it must return something.
+
+A class based component is aware about itself i.e it knows when whats rendering
+it knows when its about to be removed
+
+A class based component have lifecycle methods.
+
+ Methods prefixed with will are called right before something happens,
+ and methods prefixed with did are called right after something happens.
+ mountingmethod
+
+ 1) componentWillMount()
+componentWillMount() is invoked immediately before mounting occurs.
+It is called before render(),
+ therefore calling setState() synchronously in this method will not trigger an extra rendering.
+Generally, we recommend using the constructor() instead.
+
+Avoid introducing any side-effects or subscriptions in this method.
+For those use cases, use componentDidMount() instead.
+
+This is the only lifecycle hook called on server rendering.
+
+State:
+  -A plain javascript object used to record and respond to user triggered events
+  -Even a component loading up is a user triggered event
+  -When we want to update what a component shows we use this.setState();
+  -We only change state with setState never this.state
+difference between props and state
+-parent to child communication -use props
+-internal upkeeping of component  - use state
+
+State can only be used with class based components
