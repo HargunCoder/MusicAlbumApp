@@ -3,16 +3,19 @@
 //
 // importing libraries to build component
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
+import CardItem from './CardItem';
 
 //making a functional component because we just want to display
 // data therefore
 const AlbumDetail = (props) => {
   return (
-    <View>
-      <Text>{props.album.title}</Text>
-    </View>
-  );
+    <Card>
+      <CardItem>
+        <Text>{props.album.title}</Text>
+      </CardItem>
+    </Card>);
 };
 //exporting AlbumDetails so can be available to other components
 export default AlbumDetail;

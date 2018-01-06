@@ -1,0 +1,36 @@
+The concepts in flex we are going to use for designing our card Header
+we are going to position Image Text Text
+lets talk about some values we can give to justify content
+  -by default everything will be aligned to top left of the CardItem
+  -flex-end-
+  all multiple contents are aligned to bottom right corner
+  -center
+  all content is placed in left center
+  -space-between
+  maximize and equalize space between each Component
+  top item along top margin bottom item along bottom margin
+  -space-around
+  equal spacing between all items including top and bottom margins having
+  spacing between elements
+
+  So to handle our problem we divide our text and image in two viewS
+  -one view will have the image tag
+  -the other view will have have both the Text tags placed one below the another
+  we want both these views to be aligned to top and besides each other .
+  we use justifyContent:'flex-start' to align these two views to start.
+
+  the issue that arises is that justifyContent till now has worked only vertically
+  how to make it work horizontally
+
+  For that we use flexDirection property,it has two values it can take:
+  1)flexDirection:'column'
+    all of the flex direction rules applied using justifyContent is applied to vertiacl direction
+  2)flexDirection:'row'
+   all of the flex direction rules will be applied using justifyContent in horizontal direction
+
+   so this is how we will position the two views,now next issue is how to style in the view so
+   that both text tags come one below another.
+
+   for that we will style the view tag containing the texts to have flexDirection vertical i.e column.
+   So lets create a container for text called text container which will have the two text below each other.
+   we will use justifyContent:spaceAround to give proper spacing. 

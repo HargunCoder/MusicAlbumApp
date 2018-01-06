@@ -3,7 +3,7 @@
 // It is rendering several albumdetails components
 
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 //This is another way of defining a Compoenent.
 //A complete documentation is available on what the two methods are
 // and how to use them
