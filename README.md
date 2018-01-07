@@ -6,8 +6,21 @@ This is a very simple React Native music album app.The app is going to display a
 - Album Artist
 - Album Cover Photo and thumbnail
 - A button that redirects user to amazon page to buy the album.
+
+
 This app is for beginners to learn and understand various concepts of React Native.
-The code conatins lot of comments and notes files to explain how to use that component and why we used a particular component
+Concepts used and explained with comments and some notes.Comments and notes files also explain how to use that component and why we used a particular component
+
+## Used and explained parts of React Native
+* Components (Functional and class based)
+* Image, Text, Linking, ScrollView, AppRegistry, View, TouchableOpacity from react native
+* Set of custom,reusable Components :
+  ** AlbumDetail
+  ** AlbumList
+  ** Button
+  ** Card
+  ** CardItem
+  ** Header
 
 
 ## Getting Started
