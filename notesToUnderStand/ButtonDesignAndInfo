@@ -1,0 +1,55 @@
+We have to add clicking ability to our button.
+now there are 4 types of Responses available to a button in react native
+  1 TouchableOpacity
+  2 TouchableHighlight
+  3 TouchableNativeFeedback
+  4 TouchableWithoutFeedback
+Lets talk about TouchableOpacity that we are going to use know
+-Its a wrapper for making Views respojd to touches.
+-So the views we want to be clickable we place in between
+<TouchableOpacity></TouchableOpacity>
+-its different from other button types because here when user clicks on
+ the opacity of wrapped view decreases,dimming it
+ -Opacity is controlled by wrapping the children in an Animated.View,
+ - which is added to the view hierarchy.
+ - Be aware that this can affect layout.
+ eg.
+ <TouchableOpacity onPress={this._onPressButton}>
+     <Image
+       style={styles.button}
+       source={require('./myButton.png')}
+     />
+   </TouchableOpacity>
+  Props.
+  -activeOpacity
+   Determines what opacity of wrapped view should be when touch is active
+   its a number
+   Methods
+   setOpacityTo()
+   setOpacityTo((value: number), (duration: number));
+Animate the touchable to a new opacity.
+
+To add some action when user presses or give some input something happens
+ we can achieve this by using onPress prop to TouchableOpacity
+ we have created onPress handler which does something that does an action
+ when button pressed.
+ we want to add onPress in such a way that it can be a general tag
+ so we use pass a prop say whenPressed.
+ now this will pass the data to button component.
+ now we have to make sure that the button uses that function.
+
+
+Now we are passong a function to button using props.
+  <Button whenPressed={() => console.log(title)} />
+  we give prop to the button component
+  and we use it using
+   onPress={whenPressed}
+
+Next challenge is how to open a website through our app
+to accomplish this we will use Linking Library of React.
+We use the function Linking.OpenURL(url) to open our Link
+Read Linking
+Next we want to have to see how we display the text on a button.
+we have two ways
+1)Add it as a prop with the button function
+2)expand button and use props.children to send text.

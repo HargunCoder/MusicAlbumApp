@@ -3,7 +3,7 @@
 // It is rendering several albumdetails components
 
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 //This is another way of defining a Compoenent.
 //A complete documentation is available on what the two methods are
 // and how to use them
@@ -86,14 +86,19 @@ renderAlbums() {
   return this.state.albums.map((album) =>
   <AlbumDetail key={album.title} album={album} />);
 }
-
+//we want our View to be scrollable so we replace the view tags with ScrollView
+// we were facing issue with scrolling,to overcome This
+// we need to go to view containing this view,here its the root views
+// and give it style flex:1,this tells react please give all the space to this view
 render() {
     //checking the state before and after rendering of data
     console.log(this.state);
     return (
-      <View>
+      //<View>
+      <ScrollView>
         {this.renderAlbums()}
-      </View>
+      </ScrollView>
+      //</View>
     );
   }
 

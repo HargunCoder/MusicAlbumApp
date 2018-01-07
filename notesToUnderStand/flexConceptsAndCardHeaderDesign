@@ -33,4 +33,5 @@ lets talk about some values we can give to justify content
 
    for that we will style the view tag containing the texts to have flexDirection vertical i.e column.
    So lets create a container for text called text container which will have the two text below each other.
-   we will use justifyContent:spaceAround to give proper spacing. 
+   we will use justifyContent:spaceAround to give proper spacing.
+   we now to AlbumDetail and start building the styling
