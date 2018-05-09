@@ -12,32 +12,32 @@ This app is for beginners to learn and understand various concepts of React Nati
 Concepts used and explained with comments and some notes.Comments and notes files also explain how to use that component and why we used a particular component
 
 ## Used and explained parts of React Native
-* Components (Functional and class based)
-* Image, Text, Linking, ScrollView, AppRegistry, View, TouchableOpacity from react native
-* Set of custom,reusable Components :
-  ** AlbumDetail
-  ** AlbumList
-  ** Button
-  ** Card
-  ** CardItem
-  ** Header
+* Components (Functional and class based)  
+* Image, Text, Linking, ScrollView, AppRegistry, View, TouchableOpacity from react native  
+* Set of custom,reusable Components :  
+  ** AlbumDetail  
+  ** AlbumList  
+  ** Button  
+  ** Card  
+  ** CardItem  
+  ** Header  
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software and how to install them  
 
-1.React Native
-2.Node Js
+1. React Native  
+2. Node Js  
 
 ### Installing
 
-To Install
-1.Clone this repository (or download zip and unpack)
-2.cd into the project directory
-3.to install node modules do 
-```npm install```
-4.Setup the project in android studio using the android files (this step is needed for emulator)
-5.After the project is set up in android simply start the app using
+To Install  
+1. Clone this repository (or download zip and unpack)  
+2. cd into the project directory  
+3. to install node modules do  
+ ```npm install```  
+4. Setup the project in android studio using the android files (this step is needed for emulator)
+5. After the project is set up in android simply start the app using
 ```react-native run-android``
 
 
