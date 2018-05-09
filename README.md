@@ -43,21 +43,21 @@ To Install
 
 # FileStructure
 
-We have
-  App.js as Root element which is having-
-    -Header (which is in src/Components/Header)
-      displays header passed as HeaderText
-    -AlbumList
-      function is to fetch list of Multiple AlbumDetails and display them
+We have:  
+  App.js as Root element which is having-  
+    -Header (which is in src/Components/Header)  
+      displays header passed as HeaderText  
+    -AlbumList  
+      function is to fetch list of Multiple AlbumDetails and display them  
 
-  we had an issue of how to display the albums which we get as json file
-  The approach we chose:
-    create two files
-    1 AlbumDetails
-      function is to fetch only details of a single album
-      containing title, autor ,image etc
-    2 AlbumList
-      function is to fetch list of Multiple AlbumDetails and display them
-    Tree looks like
-    App -> AlbumList -> Multiple AlbumDetails
+  we had an issue of how to display the albums which we get as json file  
+  The approach we chose:  
+    create two files  
+    1. AlbumDetails  
+      function is to fetch only details of a single album  
+      containing title, autor ,image etc  
+    2. AlbumList  
+      function is to fetch list of Multiple AlbumDetails and display them  
+    Tree looks like  
+    App -> AlbumList -> Multiple AlbumDetails  
 
